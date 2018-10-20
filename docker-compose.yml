@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  academy-api:
+    build: .
+    environment:
+      PORT: '5000'
+      SHOW_URLS: 'true'
+      COURSES_URL: '35.237.10.213'
+      COURSES_PORT: '3000'
+      COURSES_ENTRY: 'groups'
+    ports:
+      - '5000:5000'
