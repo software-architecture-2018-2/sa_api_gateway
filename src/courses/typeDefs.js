@@ -102,12 +102,12 @@ input PlanningInput {
 ;
 
 export const coursesQueries = `
-    allCourses: [Course]!
-    courseByCode(code: Int!): Course!
+    allGroup: [Group]!
+    groupByCode(code: Int!): Group!
 `;
 
 export const coursesMutations = `
     createGroup(group: GroupInput!): Group!
     deleteGroup(code: String!): Int
-    updateGroup(code: String!, course: GroupInput!): Group!
+    updateGroup(code: String!, group: GroupInput!): Group!
 `;

@@ -5,17 +5,17 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allCourses: (_) =>
+		allGroups: (_) =>
 			getRequest(URL, ''),
-		courseByCode: (_, { code }) =>
+		groupByCode: (_, { code }) =>
 			generalRequest(`${URL}/${code}`, 'GET'),
 	},
 	Mutation: {
-		createCourse: (_, { course }) =>
-			generalRequest(`${URL}`, 'POST', course),
-		updateCourse: (_, { code, course }) =>
-			generalRequest(`${URL}/${code}`, 'PUT', course),
-		deleteCourse: (_, { code }) =>
+		createGroup: (_, { group }) =>
+			generalRequest(`${URL}`, 'POST', group),
+		updateGroup: (_, { code, group }) =>
+			generalRequest(`${URL}/${code}`, 'PUT', group),
+		deleteGroup: (_, { code }) =>
 			generalRequest(`${URL}/${code}`, 'DELETE')
 	}
 };
