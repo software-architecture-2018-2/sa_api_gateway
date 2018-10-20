@@ -110,7 +110,7 @@ input PlanningInput {
 ;
 
 export const coursesQueries = `
-    allGroup: [Group]!
+    allGroups: [Group]!
     groupByCode(code: Int!): Group!
 `;
 
