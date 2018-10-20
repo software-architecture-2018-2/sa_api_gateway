@@ -76,18 +76,18 @@ input GroupInput {
     university: String!
     status: String
     skill: [String]!
-    members: [User]!
-    director: User!
-    leader: User!
+    members: [String]!
+    director: String!
+    leader: String!
     description: String
-    project: [Project]!
+    project: [Int]!
 }
 
 input ProjectInput {
-    planning: [Planning]!
+    planning: [Int]!
     status: String
-    members: [User]!
-    leader: User!
+    members: [String]!
+    leader: String!
     title: String
     fields: [Int]!
     description: String
