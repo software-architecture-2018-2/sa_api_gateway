@@ -1,4 +1,20 @@
 export const coursesTypeDef = `
+type User {
+    id: String!
+    name: String!
+    lastname: String!
+    password: String!
+    email: String!
+    study_ar: [String]
+    organization: String
+    nationality: String
+    gender: String
+    languages: [String]
+    skills: [String]
+}
+
+
+
 type Group {
     id: String!
     topic: [String!]!
@@ -15,19 +31,6 @@ type Group {
     project: [Project]!
 }
 
-type User {
-    id: String!
-    name: String!
-    lastname: String!
-    password: String!
-    email: String!
-    study_ar: [String]
-    organization: String
-    nationality: String
-    gender: String
-    languages: [String]
-    skills: [String]
-}
 
 
 type Project {
@@ -99,7 +102,7 @@ input PlanningInput {
     day_s: Int!
     month_e: Int!
     day_e: Int!
-    member: User!
+    member: String!
     resources: Float
     publish: String
     Description: String
