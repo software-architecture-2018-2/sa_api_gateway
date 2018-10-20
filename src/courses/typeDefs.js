@@ -15,17 +15,6 @@ type Group {
     project: [Project]!
 }
 
-type Project {
-    id: Int!
-    planning: [Planning]!
-    status: String
-    members: [User]!
-    leader: User!
-    title: String
-    fields: [Int]!
-    description: String
-}
-
 type User {
     id: String!
     name: String!
@@ -39,6 +28,19 @@ type User {
     languages: [String]
     skills: [String]
 }
+
+
+type Project {
+    id: Int!
+    planning: [Planning]!
+    status: String
+    members: [User]!
+    leader: User!
+    title: String
+    fields: [Int]!
+    description: String
+}
+
 
 type Planning{
     id: Int!
