@@ -18,7 +18,7 @@ type Group {
 type Project {
     id: Int!
     planning: [Planning]!
-    status: string
+    status: String
     members: [User]!
     leader: User!
     title: String
