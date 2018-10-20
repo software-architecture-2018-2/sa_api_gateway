@@ -68,7 +68,7 @@ input GroupInput {
 
 input ProjectInput {
     planning: [Planning]!
-    status: string
+    status: String
     members: [User]!
     leader: User!
     title: String

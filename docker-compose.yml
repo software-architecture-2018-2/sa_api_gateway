@@ -1,6 +1,6 @@
 version: '2.1'
 services:
-  academy-api:
+  sapiensbook_api_g:
     build: .
     environment:
       PORT: '5000'
