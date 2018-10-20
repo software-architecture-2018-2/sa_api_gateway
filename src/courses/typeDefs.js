@@ -53,6 +53,21 @@ type Planning{
     publish: String
     Description: String
 }
+
+input UserInput {
+    name: String!
+    lastname: String!
+    password: String!
+    email: String!
+    study_ar: [String]
+    organization: String
+    nationality: String
+    gender: String
+    languages: [String]
+    skills: [String]
+}
+
+
 input GroupInput {
     topic: [String!]!
     website: String
@@ -78,18 +93,6 @@ input ProjectInput {
     description: String
 }
 
-input UserInput {
-    name: String!
-    lastname: String!
-    password: String!
-    email: String!
-    study_ar: [String]
-    organization: String
-    nationality: String
-    gender: String
-    languages: [String]
-    skills: [String]
-}
 
 input PlanningInput {
     month_s: Int!
