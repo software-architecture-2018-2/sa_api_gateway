@@ -16,7 +16,7 @@ type User {
 
 
 type Group {
-    id: ID!
+    id: String!
     topic: [String!]!
     website: String
     field: [String]!
