@@ -13,10 +13,12 @@ type User {
     skills: [String]
 }
 
-
+type ID_group{
+    soid: String!
+   }
 
 type Group {
-    id: String!
+    id: ID_group!
     topic: [String!]!
     website: String
     field: [String]!
@@ -24,17 +26,17 @@ type Group {
     university: [String]!
     status: String
     skill: [String]!
-    members: [User]!
-    director: User!
-    leader: User!
+    members: [String]!
+    director: String!
+    leader: String!
     description: String
-    project: [Project]!
+    project: [String]!
 }
 
 
 
 type Project {
-    id: Int!
+    id: String!
     planning: [Planning]!
     status: String
     members: [User]!
@@ -83,7 +85,7 @@ input GroupInput {
     director: String!
     leader: String!
     description: String
-    project: [Int]!
+    project: [String]!
 }
 
 input ProjectInput {
