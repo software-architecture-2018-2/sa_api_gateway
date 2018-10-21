@@ -111,7 +111,7 @@ input PlanningInput {
 
 export const coursesQueries = `
     allGroups: [Group]!
-    groupByCode(code: Int!): Group!
+    groupByCode(code: String!): Group!
 `;
 
 export const coursesMutations = `
