@@ -1,4 +1,4 @@
-import Koa from 'koa';
+import Koa from './koa';
 import KoaRouter from 'koa-router';
 import koaLogger from 'koa-logger';
 import koaBody from 'koa-bodyparser';
