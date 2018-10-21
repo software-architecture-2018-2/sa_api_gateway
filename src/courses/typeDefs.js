@@ -21,7 +21,7 @@ type Group {
     website: String
     field: [String]!
     logo: String
-    university: String!
+    university: [String]!
     status: String
     skill: [String]!
     members: [User]!
@@ -76,7 +76,7 @@ input GroupInput {
     website: String
     field: [String]!
     logo: String
-    university: String!
+    university: [String]!
     status: String
     skill: [String]!
     members: [String]!
