@@ -14,11 +14,11 @@ type User {
 }
 
 type ID_group{
-    soid: String!
+    $oid: String!
    }
 
 type Group {
-    id: ID_group!
+    _id: ID_group!
     topic: [String!]!
     website: String
     field: [String]!
