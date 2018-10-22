@@ -24,18 +24,18 @@ export async function generalRequest(url, method, body, fullResponse) {
 
 	try {
 
-		request.post(url,parameters).then((output) => {
+		// request.post(url,parameters).then((output) => {
 
-			console.log(output)
-			console.log(output._id.$oid)
-			return output._id.$oid
+		// 	console.log(output)
+		// 	console.log(output._id.$oid)
+		// 	return output._id.$oid
 			
 
-		} ).catch((e) => {
+		// } ).catch((e) => {
 
-			return 500
-		});
-		
+		// 	return 500
+		// });
+		return await request(parameters);
 	} catch (err) {
 		return err;
 	}
