@@ -22,6 +22,8 @@ const resolvers = {
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'GET'),
 		allUsers: (_) =>
 			getRequest(URL_u_r, ''),
+		userByCode: (_, {code}) =>
+			generalRequest(`${URL_u_r}/${code}`, 'GET'),
 	},
 	Mutation: {
 		createGroup: (_, { group }) =>

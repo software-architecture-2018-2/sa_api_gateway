@@ -115,6 +115,7 @@ export const coursesQueries = `
     groupByCode(code: String!): Group!
     allProjects: [Project]!
     projectByCode(Proyecto_Id: Int!): Project!
+    userByCode(code: String!): User!
     allUsers: [User]!
 `;
 
