@@ -18,7 +18,7 @@ type ID_group{
    }
 
 type Group {
-    _id: ID_group!
+    soid: String!
     topic: [String!]!
     website: String
     field: [String]!
