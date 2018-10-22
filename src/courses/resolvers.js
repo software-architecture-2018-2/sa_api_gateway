@@ -20,6 +20,8 @@ const resolvers = {
 			getRequest(URL_pr, ''),
 		projectByCode: (_, { Proyecto_Id }) =>
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'GET'),
+		allUsers: (_) =>
+			getRequest(URL_u_r, ''),
 	},
 	Mutation: {
 		createGroup: (_, { group }) =>
@@ -33,7 +35,9 @@ const resolvers = {
 		updateProject: (_, { Proyecto_Id, project }) =>
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'PUT', project),
 		deleteProject: (_, { Proyecto_Id }) =>
-			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'DELETE')
+			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'DELETE'),
+		createUser: (_, {user}) =>
+			generalRequest(`${URL_reg}`, 'POST', user),
 	}
 };
 

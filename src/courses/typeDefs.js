@@ -1,6 +1,6 @@
 export const coursesTypeDef = `
 type User {
-    id: String!
+    _id: String!
     name: String!
     lastname: String!
     password: String!
@@ -115,6 +115,7 @@ export const coursesQueries = `
     groupByCode(code: String!): Group!
     allProjects: [Project]!
     projectByCode(Proyecto_Id: Int!): Project!
+    allUsers: [User]!
 `;
 
 export const coursesMutations = `
@@ -124,4 +125,5 @@ export const coursesMutations = `
     createProject(project: ProjectInput!): Project!
     deleteProject(Proyecto_Id: Int!): Int
     updateProject(Proyecto_Id: Int!, project: ProjectInput!): Project!
+    createUser(user: UserInput!): User!
 `;
