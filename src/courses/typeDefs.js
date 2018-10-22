@@ -13,9 +13,6 @@ type User {
     skills: [String]
 }
 
-type ID_group{
-    soid: String!
-   }
 
 type Group {
     soid: String!
@@ -35,16 +32,7 @@ type Group {
 
 
 
-type Project {
-    id: String!
-    planning: [Planning]!
-    status: String
-    members: [User]!
-    leader: User!
-    title: String
-    fields: [Int]!
-    description: String
-}
+
 
 
 type Planning{
@@ -88,14 +76,25 @@ input GroupInput {
     project: [String]!
 }
 
+type Project {
+    Proyecto_Id: Int!
+    Planeacion_Id: [Int]!
+    Status: String!
+    Miembros: [String]!
+    Lider_de_proyecto:  String!
+    Titulo: String!
+    Areas_de_estudio: [String]!
+    Descripcion: String!
+}
+
 input ProjectInput {
-    planning: [Int]!
-    status: String
-    members: [String]!
-    leader: String!
-    title: String
-    fields: [Int]!
-    description: String
+    Planeacion_Id: [Int]!
+    Status: String!
+    Miembros: [String]!
+    Lider_de_proyecto:  String!
+    Titulo: String!
+    Areas_de_estudio: [String]!
+    Descripcion: String!
 }
 
 
@@ -114,10 +113,15 @@ input PlanningInput {
 export const coursesQueries = `
     allGroups: [Group]!
     groupByCode(code: String!): Group!
+    allProjects: [Project]!
+    projectByCode(Proyecto_Id: Int!): Project!
 `;
 
 export const coursesMutations = `
     createGroup(group: GroupInput!): Group!
     deleteGroup(code: String!): Int
     updateGroup(code: String!, group: GroupInput!): Group!
+    createProject(project: ProjectInput!): Project!
+    deleteProject(Proyecto_Id: Int!): Int
+    updateProject(Proyecto_Id: Int!, project: ProjectInput!): Project!
 `;
