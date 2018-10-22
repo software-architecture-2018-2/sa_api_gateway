@@ -23,8 +23,17 @@ export async function generalRequest(url, method, body, fullResponse) {
 	}
 
 	try {
-		request.post(url,parameters);
-		return "correcto";
+
+		request.post(url,parameters).then((output) => {
+
+			console.log(output)
+			return output
+
+		} ).catch((e) => {
+
+			return 500
+		})
+		
 	} catch (err) {
 		return err;
 	}
