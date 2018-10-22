@@ -37,7 +37,7 @@ const resolvers = {
 		deleteProject: (_, { Proyecto_Id }) =>
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'DELETE'),
 		createUser: (_, {user}) =>
-			generalRequest(`${URL_reg}`, 'POST', user),
+			generalRequest(`${URL_u_r}`, 'POST', user),
 	}
 };
 
