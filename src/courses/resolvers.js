@@ -1,4 +1,4 @@
-import { generalRequest, getRequest } from '../utilities';
+import { generalRequest, getRequest, generalRequest_w_head } from '../utilities';
 import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_entryPoint, reg_entryPoint, auth_entryPoint } from './server';
 
 //const URL = `http://${url}:${port}/${entryPoint}`;
@@ -23,7 +23,7 @@ const resolvers = {
 		allUsers: (_) =>
 			getRequest(URL_u_r, ''),
 		userByCode: (_, {code}) =>
-			generalRequest(`${URL_u_r}/${code}`, 'GET'),
+			generalRequest_w_head(`${URL_u_r}/${code}`, 'GET',token),
 	},
 	Mutation: {
 		createGroup: (_, { group }) =>

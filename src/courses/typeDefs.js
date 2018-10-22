@@ -13,6 +13,19 @@ type User {
     skills: [String]
 }
 
+type User_p {
+    _id: String!
+    name: String!
+    lastname: String!
+    email: String!
+    study_ar: [String]
+    organization: String
+    nationality: String
+    gender: String
+    languages: [String]
+    skills: [String]
+}
+
 
 type Group {
     soid: String!
@@ -115,8 +128,8 @@ export const coursesQueries = `
     groupByCode(code: String!): Group!
     allProjects: [Project]!
     projectByCode(Proyecto_Id: Int!): Project!
-    userByCode(code: String!): User!
-    allUsers: [User]!
+    userByCode(code: String!, token: String!): User_p!
+    allUsers: [User_p]!
 `;
 
 export const coursesMutations = `

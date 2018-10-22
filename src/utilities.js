@@ -14,6 +14,7 @@ export async function generalRequest(url, method, body, fullResponse) {
 		method,
 		uri: encodeURI(url),
 		body,
+
 		json: true,
 		resolveWithFullResponse: fullResponse
 	};
@@ -40,6 +41,43 @@ export async function generalRequest(url, method, body, fullResponse) {
 		return err;
 	}
 }
+
+
+export async function generalRequest_w_head(url, method, body, fullResponse,token) {
+	var myHeaders = new Headers();
+	myHeaders.append("x-auth-token",token);
+	const parameters = {
+		method,
+		uri: encodeURI(url),
+		body,
+		myHeaders,
+		json: true,
+		resolveWithFullResponse: fullResponse
+	};
+	if (process.env.SHOW_URLS) {
+		// eslint-disable-next-line
+		console.log(url);
+	}
+
+	try {
+
+		// request.post(url,parameters).then((output) => {
+
+		 	
+		// 	console.log(output._id.$oid)
+		// 	return output._id.$oid
+			
+
+		// } ).catch((e) => {
+
+		// 	return 500
+		// });
+		return await request(parameters);
+	} catch (err) {
+		return err;
+	}
+}
+
 
 /**
  * Adds parameters to a given route
