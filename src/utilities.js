@@ -27,7 +27,9 @@ export async function generalRequest(url, method, body, fullResponse) {
 		request.post(url,parameters).then((output) => {
 
 			console.log(output)
-			return output
+			console.log(output._id.$oid)
+			return output._id.$oid
+			
 
 		} ).catch((e) => {
 

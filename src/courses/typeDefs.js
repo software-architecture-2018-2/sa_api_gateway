@@ -117,7 +117,7 @@ export const coursesQueries = `
 `;
 
 export const coursesMutations = `
-    createGroup(group: GroupInput!): Group!
+    createGroup(group: GroupInput!): String!
     deleteGroup(code: String!): Int
     updateGroup(code: String!, group: GroupInput!): Group!
 `;
