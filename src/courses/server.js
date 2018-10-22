@@ -1,3 +1,10 @@
-export const url = process.env.COURSES_URL
-export const port = process.env.COURSES_PORT
-export const entryPoint = process.env.COURSES_ENTRY
+export const url = process.env.GENERAL_URL
+export const g_port = process.env.GROUP_PORT
+export const u_port = process.env.USER_PORT
+export const pr_port = process.env.PROJECT_PORT
+export const pl_port = process.env.PLANNING_PORT
+export const g_entryPoint = process.env.GROUP_ENTRY
+export const pr_entryPoint = process.env.PROJECT_ENTRY
+export const pl_entryPoint = process.env.PLANNING_ENTRY
+export const reg_entryPoint = process.env.REGISTER_ENTRY
+export const auth_entryPoint = process.env.AUTH_ENTRY
