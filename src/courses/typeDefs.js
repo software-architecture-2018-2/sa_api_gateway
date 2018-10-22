@@ -14,7 +14,7 @@ type User {
 }
 
 type ID_group{
-    $oid: String!
+    soid: String!
    }
 
 type Group {
