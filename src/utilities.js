@@ -32,7 +32,7 @@ export async function generalRequest(url, method, body, fullResponse) {
 		} ).catch((e) => {
 
 			return 500
-		})
+		});
 		
 	} catch (err) {
 		return err;
