@@ -122,7 +122,14 @@ input PlanningInput {
     resources: Float
     publish: String
     Description: String
-}`
+}
+
+input loginInput{
+    user: String!
+    pass: String!
+}
+
+`
 ;
 
 export const coursesQueries = `
@@ -142,4 +149,5 @@ export const coursesMutations = `
     deleteProject(Proyecto_Id: Int!): Int
     updateProject(Proyecto_Id: Int!, project: ProjectInput!): Project!
     createUser(user: UserInput!): User!
+    login(data: loginInput!): String!
 `;
