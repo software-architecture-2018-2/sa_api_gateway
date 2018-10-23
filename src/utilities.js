@@ -43,7 +43,7 @@ export async function generalRequest(url, method, body, fullResponse) {
 }
 
 
-export async function generalRequest_w_head(url, method,token) {
+export async function generalRequest_w_head(url, method, token) {
 	console.log(token);
 	const parameters = {
 		method,
