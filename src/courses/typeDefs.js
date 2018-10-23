@@ -125,8 +125,8 @@ input PlanningInput {
 }
 
 input loginInput{
-    user: String!
-    pass: String!
+    email: String!
+    password: String!
 }
 
 `
