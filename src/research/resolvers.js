@@ -35,9 +35,9 @@ const resolvers = {
 			generalRequest(`${URL_g}`, 'POST', group),
 		updateGroup: (_, { code, group }) =>
 			generalRequest(`${URL_g}/${code}`, 'PUT', group),
-		deleteGroup: (_, { code, id }) =>
+		deleteGroup: async(_, { code, id }) =>
 		{
-			let return_e = generalRequest(`${URL_g}/${code}`, 'GET')
+			let return_e = await generalRequest(`${URL_g}/${code}`, 'GET')
 			return generalRequestDelete(`${URL_g}/${code}`, 'DELETE', id, return_e)
 		},
 		createProject: (_, { project }) =>
