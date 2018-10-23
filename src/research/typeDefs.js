@@ -1,4 +1,4 @@
-export const coursesTypeDef = `
+export const researchTypeDef = `
 type User {
     _id: String!
     name: String!
@@ -132,7 +132,7 @@ input loginInput {
 `
 ;
 
-export const coursesQueries = `
+export const researchQueries = `
     allGroups: [Group]!
     groupByCode(code: String!): Group!
     allProjects: [Project]!
@@ -142,7 +142,7 @@ export const coursesQueries = `
     me(token: String!): User_p!
 `;
 
-export const coursesMutations = `
+export const researchMutations = `
     createGroup(group: GroupInput!): Group!
     deleteGroup(code: String!): Int
     updateGroup(code: String!, group: GroupInput!): Group!
