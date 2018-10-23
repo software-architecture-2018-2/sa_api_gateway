@@ -48,10 +48,9 @@ export async function generalRequest_w_head(url, method,token) {
 	const parameters = {
 		method,
 		uri: encodeURI(url),
-		body,
 		headers: {'x-auth-token':token} ,
 		json: true,
-		resolveWithFullResponse: fullResponse
+		
 	};
 	if (process.env.SHOW_URLS) {
 		// eslint-disable-next-line
