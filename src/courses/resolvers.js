@@ -1,5 +1,5 @@
 import { generalRequest, getRequest, generalRequest_w_head } from '../utilities';
-import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_entryPoint, reg_entryPoint, auth_entryPoint } from './server';
+import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_entryPoint, reg_entryPoint, auth_entryPoint, me_entryPoint } from './server';
 
 //const URL = `http://${url}:${port}/${entryPoint}`;
 
