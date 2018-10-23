@@ -50,7 +50,7 @@ export async function generalRequest_w_head(url, method, body, fullResponse,toke
 		method,
 		uri: encodeURI(url),
 		body,
-		headers,
+		header:headers ,
 		json: true,
 		resolveWithFullResponse: fullResponse
 	};
