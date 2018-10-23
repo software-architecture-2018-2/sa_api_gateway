@@ -44,13 +44,12 @@ export async function generalRequest(url, method, body, fullResponse) {
 
 
 export async function generalRequest_w_head(url, method, body, fullResponse,token) {
-	var headers = new Headers();
-	headers.append("x-auth-token",token);
+	
 	const parameters = {
 		method,
 		uri: encodeURI(url),
 		body,
-		headers:headers ,
+		headers: {'x-auth-token':token} ,
 		json: true,
 		resolveWithFullResponse: fullResponse
 	};
