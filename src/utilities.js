@@ -61,17 +61,7 @@ export async function generalRequest_w_head(url, method, body, fullResponse,toke
 
 	try {
 
-		// request.post(url,parameters).then((output) => {
-
-		 	
-		// 	console.log(output._id.$oid)
-		// 	return output._id.$oid
-			
-
-		// } ).catch((e) => {
-
-		// 	return 500
-		// });
+		
 		return await request(parameters);
 	} catch (err) {
 		return err;

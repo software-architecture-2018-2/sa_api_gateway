@@ -29,6 +29,7 @@ type User_p {
 
 type Group {
     soid: String!
+    name: String!
     topic: [String!]!
     website: String
     field: [String]!
@@ -75,6 +76,7 @@ input UserInput {
 
 
 input GroupInput {
+    name: String!
     topic: [String!]!
     website: String
     field: [String]!
