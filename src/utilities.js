@@ -63,7 +63,7 @@ export async function generalRequestHead(url, method, token) {
 	}
 }
 export async function generalRequestDelete(url, method, token, body) {
-	console.log(token);
+	console.log(body);
 	const parameters = {
 		method,
 		uri: encodeURI(url),
@@ -77,8 +77,8 @@ export async function generalRequestDelete(url, method, token, body) {
 	}
 
 	try {
-		let leader = body;
-		console.log(body);
+		// let leader = body;
+		// console.log(body);
 		return await request(parameters);
 	} catch (err) {
 		return err;
