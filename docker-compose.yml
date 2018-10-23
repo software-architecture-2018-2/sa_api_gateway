@@ -15,6 +15,7 @@ services:
       PLANNING_ENTRY: 'plan'
       REGISTER_ENTRY: 'api/users'
       AUTH_ENTRY: 'api/auth'
+      ME_ENTRY: 'api/users/me'
 
     ports:
       - '5000:5000'

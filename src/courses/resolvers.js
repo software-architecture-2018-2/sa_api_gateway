@@ -8,6 +8,7 @@ const URL_pr = `http://${url}:${pr_port}/${pr_entryPoint}`;
 const URL_pl = `http://${url}:${pl_port}/${pl_entryPoint}`;
 const URL_u_r = `http://${url}:${u_port}/${reg_entryPoint}`;
 const URL_u_auth = `http://${url}:${u_port}/${auth_entryPoint}`;
+const URL_u_me = `http://${url}:${u_port}/${me_entryPoint}`;
 
 
 const resolvers = {
@@ -24,6 +25,10 @@ const resolvers = {
 			getRequest(URL_u_r, ''),
 		userByCode: (_, {code, token}) =>
 			generalRequest_w_head(`${URL_u_r}/${code}`, 'GET',token),
+		me: (_,{token}) =>
+			generalRequest_w_head(`${URL_u_me}`,'GET',token),
+
+
 	},
 	Mutation: {
 		createGroup: (_, { group }) =>

@@ -139,6 +139,7 @@ export const coursesQueries = `
     projectByCode(Proyecto_Id: Int!): Project!
     userByCode(code: String!, token: String!): User_p!
     allUsers: [User_p]!
+    me(token: String!): User_p!
 `;
 
 export const coursesMutations = `

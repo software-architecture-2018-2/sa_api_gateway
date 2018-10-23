@@ -8,3 +8,4 @@ export const pr_entryPoint = process.env.PROJECT_ENTRY
 export const pl_entryPoint = process.env.PLANNING_ENTRY
 export const reg_entryPoint = process.env.REGISTER_ENTRY
 export const auth_entryPoint = process.env.AUTH_ENTRY
+export const me_entryPoint = process.env.ME_ENTRY
