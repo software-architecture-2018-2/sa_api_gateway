@@ -23,7 +23,7 @@ const resolvers = {
 		allUsers: (_) =>
 			getRequest(URL_u_r, ''),
 		userByCode: (_, {code}, {token}) =>
-			generalRequest_w_head(`${URL_u_r}/${code}`, 'GET',token),
+			generalRequest_w_head(`${URL_u_r}/${code}`, 'GET',_,_,token),
 	},
 	Mutation: {
 		createGroup: (_, { group }) =>
