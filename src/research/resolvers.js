@@ -1,4 +1,4 @@
-import { generalRequest, getRequest, generalRequest_w_head } from '../utilities';
+import { generalRequest, getRequest, generalRequestHead, generalRequestDelete } from '../utilities';
 import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_entryPoint, reg_entryPoint, auth_entryPoint, me_entryPoint } from './server';
 
 //const URL = `http://${url}:${port}/${entryPoint}`;
@@ -24,9 +24,9 @@ const resolvers = {
 		allUsers: (_) =>
 			getRequest(URL_u_r, ''),
 		userByCode: (_, {code, token}) =>
-			generalRequest_w_head(`${URL_u_r}/${code}`, 'GET',token),
+			generalRequestHead(`${URL_u_r}/${code}`, 'GET',token),
 		me: (_,{token}) =>
-			generalRequest_w_head(`${URL_u_me}`,'GET',token),
+			generalRequestHead(`${URL_u_me}`,'GET',token),
 
 
 	},
@@ -35,8 +35,11 @@ const resolvers = {
 			generalRequest(`${URL_g}`, 'POST', group),
 		updateGroup: (_, { code, group }) =>
 			generalRequest(`${URL_g}/${code}`, 'PUT', group),
-		deleteGroup: (_, { code }) =>
-			generalRequest(`${URL_g}/${code}`, 'DELETE'),
+		deleteGroup: (_, { code, id }) =>
+		{
+			let return_e = generalRequest(`${URL_g}/${code}`, 'GET')
+			return generalRequestDelete(`${URL_g}/${code}`, 'DELETE', id, return_e)
+		},
 		createProject: (_, { project }) =>
 			generalRequest(`${URL_pr}`, 'POST', project),
 		updateProject: (_, { Proyecto_Id, project }) =>

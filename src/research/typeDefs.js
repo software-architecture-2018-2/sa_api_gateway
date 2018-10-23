@@ -144,7 +144,7 @@ export const researchQueries = `
 
 export const researchMutations = `
     createGroup(group: GroupInput!): Group!
-    deleteGroup(code: String!): Int
+    deleteGroup(code: String! , id: String!): Int
     updateGroup(code: String!, group: GroupInput!): Group!
     createProject(project: ProjectInput!): Project!
     deleteProject(Proyecto_Id: Int!): Int

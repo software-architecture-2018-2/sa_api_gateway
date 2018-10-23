@@ -41,7 +41,7 @@ export async function generalRequest(url, method, body, fullResponse) {
 }
 
 
-export async function generalRequest_w_head(url, method, token) {
+export async function generalRequestHead(url, method, token) {
 	console.log(token);
 	const parameters = {
 		method,
@@ -57,6 +57,28 @@ export async function generalRequest_w_head(url, method, token) {
 
 	try {
 		console.log(parameters);
+		return await request(parameters);
+	} catch (err) {
+		return err;
+	}
+}
+export async function generalRequestDelete(url, method, token, body) {
+	console.log(token);
+	const parameters = {
+		method,
+		uri: encodeURI(url),
+		headers: {'x-auth-token':token} ,
+		json: true,
+		
+	};
+	if (process.env.SHOW_URLS) {
+		// eslint-disable-next-line
+		console.log(url);
+	}
+
+	try {
+		let leader = body;
+		console.log(body);
 		return await request(parameters);
 	} catch (err) {
 		return err;
