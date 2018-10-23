@@ -59,6 +59,7 @@ export async function generalRequest_w_head(url, method, body, fullResponse,toke
 	}
 
 	try {
+		console.log(parameters);
 		return await request(parameters);
 	} catch (err) {
 		return err;
