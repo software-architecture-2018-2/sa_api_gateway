@@ -124,7 +124,7 @@ input PlanningInput {
     Description: String
 }
 
-input loginInput{
+input loginInput {
     email: String!
     password: String!
 }

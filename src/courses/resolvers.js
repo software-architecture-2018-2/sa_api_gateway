@@ -41,7 +41,7 @@ const resolvers = {
 		createUser: (_, {user}) =>
 			generalRequest(`${URL_u_r}`, 'POST', user),
 		login: (_, {data}) =>
-			generalRequest(`${URL_u_auth}`,'POST',data)
+			generalRequest(`${URL_u_auth}`,'POST', data)
 	}
 };
 
