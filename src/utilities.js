@@ -63,7 +63,7 @@ export async function generalRequestHead(url, method, token) {
 	}
 }
 export async function generalRequestDelete(url, method, token, body) {
-	console.log(body);
+
 	const parameters = {
 		method,
 		uri: encodeURI(url),
@@ -77,9 +77,20 @@ export async function generalRequestDelete(url, method, token, body) {
 	}
 
 	try {
-		// let leader = body;
+		 let leader = body.leader;
+		 if(leader == token){
+			 console.log("Succesfully deleted");
+			return await request(parameters);
+		 }
+		 else
+		 {
+			//  throw Error("User not allowed to delete group");
+			return {
+				error: "User not allowed to delete group"
+			}
+		 }
 		// console.log(body);
-		return await request(parameters);
+		
 	} catch (err) {
 		return err;
 	}
