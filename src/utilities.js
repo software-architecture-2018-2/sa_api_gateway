@@ -56,7 +56,6 @@ export async function generalRequestHead(url, method, token) {
 	}
 
 	try {
-		console.log(parameters);
 		return await request(parameters);
 	} catch (err) {
 		return err;
