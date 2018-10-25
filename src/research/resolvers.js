@@ -35,7 +35,7 @@ const resolvers = {
 		{
 			let current_usr = await generalRequestHead(`${URL_u_me}`,'GET',token)
 			group.leader = current_usr._id
-			await generalRequest(`${URL_g}`, 'POST', group)
+			return generalRequest(`${URL_g}`, 'POST', group)
 		},
 		updateGroup: (_, { code, group }) =>
 			generalRequest(`${URL_g}/${code}`, 'PUT', group),
