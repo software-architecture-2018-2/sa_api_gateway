@@ -31,8 +31,12 @@ const resolvers = {
 
 	},
 	Mutation: {
-		createGroup: (_, { group }) =>
-			generalRequest(`${URL_g}`, 'POST', group),
+		createGroup: async (_, { group, token }) =>
+		{
+			let current_usr =  generalRequestHead(`${URL_u_me}`,'GET',token)
+			group.leader = current_usr._id
+			generalRequest(`${URL_g}`, 'POST', group)
+		},
 		updateGroup: (_, { code, group }) =>
 			generalRequest(`${URL_g}/${code}`, 'PUT', group),
 		deleteGroup: async(_, { code, id }) =>
