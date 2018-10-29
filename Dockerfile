@@ -1,14 +1,14 @@
 FROM node:carbon-slim
 
 # Create app directory
-WORKDIR /gateway
+WORKDIR /api_gateway
 
 # Install app dependencies
-COPY package.json /gateway
+COPY package.json /api_gateway
 RUN npm install
 
 # Bundle app source
-COPY . /gateway
+COPY . /api_gateway
 RUN npm run prepublish
 
 CMD [ "npm", "run", "runServer" ]
