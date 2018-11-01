@@ -10,6 +10,8 @@ import { formatError } from 'graphql';
  * @return {Promise.<*>} - promise with the error or the response object
  */
 export async function generalRequest(url, method, body, fullResponse) {
+	console.log("============ BODY")
+	console.log(body);
 	const parameters = {
 		method,
 		uri: encodeURI(url),
