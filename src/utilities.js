@@ -10,8 +10,9 @@ import { formatError } from 'graphql';
  * @return {Promise.<*>} - promise with the error or the response object
  */
 export async function generalRequest(url, method, body, fullResponse) {
-	console.log("============ BODY")
+	console.log("============ BODY");
 	console.log(body);
+
 	const parameters = {
 		method,
 		uri: encodeURI(url),
@@ -26,16 +27,8 @@ export async function generalRequest(url, method, body, fullResponse) {
 	}
 
 	try {
-
-		// request.post(url,parameters).then((output) =>  	
-		// 	console.log(output._id.$oid)
-		// 	return output._id.$oid
-			
-
-		// } ).catch((e) => {
-
-		// 	return 500
-		// });
+		console.log("===== parametros")
+		console.log(parameters);
 		return await request(parameters);
 	} catch (err) {
 		return err;
