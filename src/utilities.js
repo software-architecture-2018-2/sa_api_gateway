@@ -23,7 +23,7 @@ export async function generalRequest(url, method, body, fullResponse) {
 	};
 	if (process.env.SHOW_URLS) {
 		// eslint-disable-next-line
-		console.log(url);
+		console.log(url+ "jijijiji");
 	}
 
 	try {
