@@ -59,6 +59,6 @@ const resolvers = {
 	}
 };
 
-Object.assign(resolvers.Mutation, userResolver);
+Object.assign(resolvers.Mutation, userResolver.Mutation);
 
 export default resolvers;
