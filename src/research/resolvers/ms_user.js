@@ -19,8 +19,8 @@ const resolvers = {
   },
 
   Mutation: {
-    createUser(_, { user }) {
-      return generalRequest(`${url}/api/users`, 'POST', user);
+    createUser(_, { user, token }) {
+      return generalRequest(`${url}/api/users`, 'POST', user, token);
     }
   }
 }
