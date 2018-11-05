@@ -22,6 +22,9 @@ const resolvers = {
 
   Mutation: {
     createUser(_, { user }) {
+      console.log("<><><><>");
+      console.log("Showwing: ", url);
+      console.log(`${url}/api/users/me`);
       return generalRequest(`${url}/api/users/me`, 'POST', user);
     }
   }
