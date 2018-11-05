@@ -4,9 +4,8 @@ const ms = 'USER'
 const baseurl = process.env.GENERAL_URL;
 
 const port = process.env[`${ms}_PORT`];
-const entryPoint = process.env[`${ms}_ENTRY`];
 
-const url = `http://${baseurl}:${port}/${entryPoint}`;
+const url = `http://${baseurl}:${port}`;
 
 const resolvers = {
   Query: {
