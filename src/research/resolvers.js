@@ -56,8 +56,9 @@ const resolvers = {
 		// 	generalRequest(`${URL_u_r}`, 'POST', user),
 		login: (_, {data}) =>
       generalRequest(`${URL_u_auth}`,'POST', data),
-    ...userResolver.Mutation
 	}
 };
+
+Object.assign(resolvers.Mutation, userResolver);
 
 export default resolvers;
