@@ -17,13 +17,12 @@ export async function generalRequest(url, method, body, fullResponse) {
 		method,
 		uri: encodeURI(url),
 		body,
-
+    headers: {'x-auth-token':token},
 		json: true,
-		resolveWithFullResponse: fullResponse
+		resolveWithFullResponse: true
 	};
 	if (process.env.SHOW_URLS) {
 		// eslint-disable-next-line
-		console.log(url+ "jijijiji");
 	}
 
 	try {
@@ -41,7 +40,7 @@ export async function generalRequestHead(url, method, token) {
 	const parameters = {
 		method,
 		uri: encodeURI(url),
-		headers: {'x-auth-token':token} ,
+		headers: {'x-auth-token':token},
 		json: true,
 		
 	};
