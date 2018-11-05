@@ -9,7 +9,7 @@ import { formatError } from 'graphql';
  * @param {boolean} [fullResponse]
  * @return {Promise.<*>} - promise with the error or the response object
  */
-export async function generalRequest(url, method, body, token = nil) {
+export async function generalRequest(url, method, body, token = "") {
 	console.log("============ BODY");
 	console.log(body);
 
