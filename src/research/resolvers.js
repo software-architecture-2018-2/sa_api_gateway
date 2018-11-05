@@ -3,6 +3,8 @@ import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_ent
 
 //const URL = `http://${url}:${port}/${entryPoint}`;
 
+import userResolver from './resolvers/ms_user'
+
 const URL_g = `http://${url}:${g_port}/${g_entryPoint}`;
 const URL_pr = `http://${url}:${pr_port}/${pr_entryPoint}`;
 const URL_pl = `http://${url}:${pl_port}/${pl_entryPoint}`;
@@ -50,10 +52,11 @@ const resolvers = {
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'PUT', project),
 		deleteProject: (_, { Proyecto_Id }) =>
 			generalRequest(`${URL_pr}/${Proyecto_Id}`, 'DELETE'),
-		createUser: (_, {user}) =>
-			generalRequest(`${URL_u_r}`, 'POST', user),
+		// createUser: (_, {user}) =>
+		// 	generalRequest(`${URL_u_r}`, 'POST', user),
 		login: (_, {data}) =>
-			generalRequest(`${URL_u_auth}`,'POST', data)
+      generalRequest(`${URL_u_auth}`,'POST', data),
+    ...userResolver.Mutation
 	}
 };
 

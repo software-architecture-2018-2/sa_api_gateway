@@ -26,7 +26,6 @@ type User_p {
     skills: [String]
 }
 
-
 type Group {
     soid: String!
     name: String!
@@ -43,11 +42,6 @@ type Group {
     description: String
     project: [String]!
 }
-
-
-
-
-
 
 type Planning{
     id: Int!
