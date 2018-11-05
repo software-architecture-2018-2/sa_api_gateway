@@ -19,7 +19,6 @@ export async function generalRequest(url, method, body, token = "") {
     body,
     headers: {'x-auth-token': token},
 		json: true,
-		resolveWithFullResponse: true
 	};
 
 	try {
