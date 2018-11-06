@@ -43,16 +43,16 @@ type Group {
     project: [String]!
 }
 
-type Planning{
+type Plan{
     id: Int!
     month_s: Int!
     day_s: Int!
     month_e: Int!
     day_e: Int!
-    member: User!
+    member: String!
     resources: Float
     publish: String
-    Description: String
+    description: String
 }
 
 input UserInput {
@@ -107,7 +107,7 @@ input ProjectInput {
 }
 
 
-input PlanningInput {
+input PlanInput {
     month_s: Int!
     day_s: Int!
     month_e: Int!
@@ -134,6 +134,8 @@ export const researchQueries = `
     userByCode(code: String!, token: String!): User_p!
     allUsers: [User_p]!
     me(token: String!): User_p!
+    allPlans: [Plan]!
+    planByCode(code: String!, token: String!): Plan!
 `;
 
 export const researchMutations = `
@@ -143,6 +145,9 @@ export const researchMutations = `
     createProject(project: ProjectInput!): Project!
     deleteProject(Proyecto_Id: Int!): Int
     updateProject(Proyecto_Id: Int!, project: ProjectInput!): Project!
+    createPlan(plan: PlanInput!): Plan!
+    updatePlan(id: Int!, plan: PlanInput!): Plan!
+    deletePlan(id: Int!): Int
     createUser(user: UserInput!): User!
     login(data: loginInput!): String!
 `;
