@@ -7,7 +7,7 @@ const url = `http://${baseurl}:${port}`;
 
 const resolvers = {
   Query: {
-    getAll(_) {
+    allUsers(_) {
       return getRequest(url, '');
     },
     findById(_, { id }) {
