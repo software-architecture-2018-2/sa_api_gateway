@@ -1,4 +1,4 @@
-import { getRequest, generalRequest, generalRequestHead } from "../../utilities";
+import { getRequest, generalRequest } from "../../utilities";
 
 const ms = 'PLANNING'
 const baseurl = process.env.GENERAL_URL;
