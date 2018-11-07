@@ -119,26 +119,6 @@ input ProjectInput {
 }
 
 
-input PlanInput {
-    month_s: Int!
-    day_s: Int!
-    month_e: Int!
-    day_e: Int!
-    member: String!
-    resources: Float
-    publish: String
-    description: String
-}
-input PlanInput {
-    month_s: Int!
-    day_s: Int!
-    month_e: Int!
-    day_e: Int!
-    member: String!
-    resources: Float
-    publish: String
-    description: String
-}
 
 input loginInput {
     email: String!
