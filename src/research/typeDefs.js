@@ -50,7 +50,7 @@ type Plan{
     MonthEndDate: Int!
     DayEndDate: Int!
     Resources: Float
-    idHeadMember: String!
+    idHeadMember: Int!
     Publish: String
     Description: String
 }
@@ -61,7 +61,7 @@ input PlanInput {
     MonthEndDate: Int!
     DayEndDate: Int!
     Resources: Float
-    idHeadMember: String!
+    idHeadMember: Int!
     Publish: String
     Description: String
 }
