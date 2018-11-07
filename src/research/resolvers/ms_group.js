@@ -18,7 +18,7 @@ const resolvers = {
     Mutation: {
         async createGroup (_, { group, token }) 
 		{
-			let current_usr = await generalRequestHead(`${url}/me`,'GET',token);
+			let current_usr = await generalRequestHead(`${url}/api/users/me`,'GET',token);
 			group.leader = current_usr._id;
 			return generalRequest(`${url}`, 'POST', group);
 		},
