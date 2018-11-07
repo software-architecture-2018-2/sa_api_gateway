@@ -9,16 +9,7 @@ import projectResolver from './resolvers/ms_project'
 import planResolver from './resolvers/ms_plan'
 
 
-const resolvers = {
-    Mutation: {
-        createUser(_, { user }) {
-          return generalRequest(`${url}/api/users`, 'POST', user);
-        },
-        login (_, {data}){
-          return generalRequest(`${url}/auth`,'POST', data);
-        }
-      }
-};
+const resolvers = {};
 
 Object.assign(resolvers, userResolver);
 Object.assign(resolvers, groupResolver);
