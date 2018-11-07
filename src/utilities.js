@@ -56,7 +56,6 @@ export async function generalRequestDelete(url, method, token, body) {
 	const parameters = {
 		method,
 		uri: encodeURI(url),
-		headers: {'x-auth-token':token} ,
 		json: true,
 		
 	};
@@ -84,6 +83,7 @@ export async function generalRequestDelete(url, method, token, body) {
 		return err;
 	}
 }
+
 
 
 /**

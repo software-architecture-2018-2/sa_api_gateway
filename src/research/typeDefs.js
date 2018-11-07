@@ -115,7 +115,7 @@ input PlanInput {
     member: String!
     resources: Float
     publish: String
-    Description: String
+    description: String
 }
 
 input loginInput {

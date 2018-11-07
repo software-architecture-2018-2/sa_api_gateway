@@ -27,7 +27,12 @@ const resolvers = {
 		},
         updateGroup (_, { code, group }) 
         {
-            generalRequest(`${url}/${code}`, 'PUT', group);
+      let id = await generalRequest(`${url2}/api/users/me`, 'GET');
+      let cur_group = await generalRequest(`${url}/${code}`, 'GET');
+      if (id == cur_group.leader){
+        return generalRequest(`${url}/${code}`, 'PUT', group);
+      }
+			
         },
 		async deleteGroup(_, { code, id })
 		{
