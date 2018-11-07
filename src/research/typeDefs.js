@@ -143,9 +143,9 @@ export const researchMutations = `
     createGroup(group: GroupInput!, token: String!): Group!
     deleteGroup(code: String! , id: String!): Int
     updateGroup(code: String!, group: GroupInput!, token: String!): Group!
-    createProject(project: ProjectInput!): Project!
-    deleteProject(Proyecto_Id: Int!): Int
-    updateProject(Proyecto_Id: Int!, project: ProjectInput!): Project!
+    createProject(project: ProjectInput!, token: String!): Project!
+    deleteProject(Proyecto_Id: Int!, token: String!): Int
+    updateProject(Proyecto_Id: Int!, project: ProjectInput!, token: String!): Project!
     createPlan(plan: PlanInput!): Plan!
     updatePlan(id: Int!, plan: PlanInput!): Plan!
     deletePlan(id: Int!): Int
