@@ -10,7 +10,7 @@ const resolvers = {
     allUsers(_) {
       return getRequest(url, '');
     },
-    findById(_, { id }) {
+    userByCode(_, { id }) {
       return generalRequest(`${url}/${id}`, 'GET');
     },
     me(_, { token }) { 
