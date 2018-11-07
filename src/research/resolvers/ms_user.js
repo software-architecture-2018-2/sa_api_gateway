@@ -23,7 +23,7 @@ const resolvers = {
       return generalRequest(`${url}/api/users`, 'POST', user);
     },
     login (_, {data}){
-      generalRequest(`${URL_u_auth}`,'POST', data);
+      generalRequest(`${url}/auth`,'POST', data);
     }
   }
 }

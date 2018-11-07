@@ -16,8 +16,8 @@ export async function generalRequest(url, method, body, token = "") {
 	const parameters = {
 		method,
 		uri: encodeURI(url),
-    body,
-    headers: {'x-auth-token': token},
+    	body,
+    	headers: {'x-auth-token': token},
 		json: true,
 	};
 
