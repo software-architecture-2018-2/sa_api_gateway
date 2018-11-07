@@ -34,6 +34,7 @@ const resolvers = {
       console.log(">>>> GROUP");
       console.log(cur_group);
       if (id == cur_group.leader){
+        console.log("FInally")
         return generalRequest(`${url}/${code}`, 'PUT', group);
       }
 			
