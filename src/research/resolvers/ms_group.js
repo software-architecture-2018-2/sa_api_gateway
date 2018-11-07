@@ -4,6 +4,7 @@ const ms = 'GROUP'
 const baseurl = process.env.GENERAL_URL;
 const port = process.env[`${ms}_PORT`];
 const url = `http://${baseurl}:${port}/groups`;
+const url2 = `http://${baseurl}:3001`;
 
 const resolvers = {
     Query: {
@@ -18,7 +19,7 @@ const resolvers = {
     Mutation: {
         async createGroup (_, { group, token }) 
 		{
-      let current_usr = await generalRequestHead(`${url}/api/users/me`,'GET',token);
+      let current_usr = await generalRequestHead(`${url2}/api/users/me`,'GET',token);
       console.log("=====currentusr");
       console.log(current_usr)
 			group.leader = current_usr._id;
