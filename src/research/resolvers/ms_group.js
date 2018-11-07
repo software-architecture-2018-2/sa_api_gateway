@@ -33,7 +33,7 @@ const resolvers = {
       let cur_group = await generalRequest(`${url}/${code}`, 'GET');
       console.log(">>>> GROUP");
       console.log(cur_group.leader);
-      if (id == cur_group.leader){
+      if (id._id == cur_group.leader){
         console.log("FInally")
         return generalRequest(`${url}/${code}`, 'PUT', group);
       }
