@@ -28,6 +28,8 @@ const resolvers = {
       async  updateGroup (_, { code, group, token }) 
         {
       let id = await generalRequestHead(`${url2}/api/users/me`, 'GET', token);
+      console.log(">>>> ID");
+      console.log(id);
       let cur_group = await generalRequest(`${url}/${code}`, 'GET');
       if (id == cur_group.leader){
         return generalRequest(`${url}/${code}`, 'PUT', group);
