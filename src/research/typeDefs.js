@@ -45,14 +45,25 @@ type Group {
 
 type Plan{
     id: Int!
-    month_s: Int!
-    day_s: Int!
-    month_e: Int!
-    day_e: Int!
-    member: String!
-    resources: Float
-    publish: String
-    description: String
+    MonthStartDate: Int!
+    DayStartDate: Int!
+    MonthEndDate: Int!
+    DayEndDate: Int!
+    Resources: Float
+    idHeadMember: String!
+    Publish: String
+    Description: String
+}
+
+input PlanInput {
+    MonthStartDate: Int!
+    DayStartDate: Int!
+    MonthEndDate: Int!
+    DayEndDate: Int!
+    Resources: Float
+    idHeadMember: String!
+    Publish: String
+    Description: String
 }
 
 input UserInput {
@@ -118,6 +129,16 @@ input PlanInput {
     publish: String
     description: String
 }
+input PlanInput {
+    month_s: Int!
+    day_s: Int!
+    month_e: Int!
+    day_e: Int!
+    member: String!
+    resources: Float
+    publish: String
+    description: String
+}
 
 input loginInput {
     email: String!
@@ -144,7 +165,7 @@ export const researchMutations = `
     deleteGroup(code: String! , id: String!): Int
     updateGroup(code: String!, group: GroupInput!, token: String!): Group!
     createProject(project: ProjectInput!, token: String!): Project!
-    deleteProject(Proyecto_Id: Int!, token: String!): Int
+    deleteProject(Proyecto_Id: Int!, token : String!): Int
     updateProject(Proyecto_Id: Int!, project: ProjectInput!, token: String!): Project!
     createPlan(plan: PlanInput!): Plan!
     updatePlan(id: Int!, plan: PlanInput!): Plan!
