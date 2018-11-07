@@ -1,4 +1,4 @@
-import { generalRequest, getRequest, generalRequestHead, generalRequestDelete } from '../utilities';
+import { generalRequest, getRequest, generalRequestHead, generalRequestDelete, mergeDeep } from '../utilities';
 import { url, g_port,u_port,pr_port,pl_port, g_entryPoint, pr_entryPoint, pl_entryPoint, reg_entryPoint, auth_entryPoint, me_entryPoint } from './server';
 
 //const URL = `http://${url}:${port}/${entryPoint}`;
@@ -59,6 +59,6 @@ const resolvers = {
 	}
 };
 
-Object.assign(resolvers.Mutation, userResolver.Mutation);
+mergeDeep(resolvers, userResolver);
 
 export default resolvers;
