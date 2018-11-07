@@ -14,7 +14,7 @@ const resolvers = {
       return generalRequest(`${url}/${id}`, 'GET');
     },
     me(_, { token }) { 
-      return generalRequestHead(`${url}/me`, 'GET', token);
+      return generalRequestHead(`${url}/api/users/me`, 'GET', token);
     }
   },
 
