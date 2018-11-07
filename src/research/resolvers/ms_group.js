@@ -25,9 +25,9 @@ const resolvers = {
 			group.leader = current_usr._id;
 			return generalRequest(`${url}`, 'POST', group);
 		},
-      async  updateGroup (_, { code, group }) 
+      async  updateGroup (_, { code, group, token }) 
         {
-      let id = await generalRequest(`${url2}/api/users/me`, 'GET');
+      let id = await generalRequestHead(`${url2}/api/users/me`, 'GET', token);
       let cur_group = await generalRequest(`${url}/${code}`, 'GET');
       if (id == cur_group.leader){
         return generalRequest(`${url}/${code}`, 'PUT', group);
