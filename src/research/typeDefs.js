@@ -85,6 +85,7 @@ input GroupInput {
     project: [String]!
 }
 
+
 type Project {
     Proyecto_Id: Int!
     Planeacion_Id: [Int]!
