@@ -17,12 +17,12 @@ const resolvers = {
     },
   
     Mutation: {
-        createProject (_, { project }) {
+        async createProject (_, { project }) {
           let current_usr = await generalRequestHead(`${url2}/api/users/me`,'GET',token);
           project.Lider_de_proyecto = current_usr._id;
           return  generalRequest(`${url}`, 'POST', project);
         },
-        updateProject (_, { Proyecto_Id, project })
+        async updateProject (_, { Proyecto_Id, project })
         {
           let id = await generalRequestHead(`${url2}/api/users/me`, 'GET', token);
           let cur_proj = await generalRequest(`${url}/${Proyecto_Id}`, 'GET');
@@ -31,7 +31,7 @@ const resolvers = {
            return generalRequest(`${url}/${Proyecto_Id}`, 'PUT', project);
           }
         },    
-        deleteProject (_, { Proyecto_Id }) {
+        async deleteProject (_, { Proyecto_Id }) {
            let proj = await generalRequest(`${url}/${Proyecto_Id}`, 'GET');
            let id = await generalRequestHead(`${url2}/api/users/me`, 'GET', token);
            if(id._id == proj.Lider_de_proyecto){
