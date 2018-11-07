@@ -8,7 +8,7 @@ const url = `http://${baseurl}:${port}`;
 const resolvers = {
   Query: {
     allUsers(_) {
-      return getRequest(url, '');
+      return getRequest(`${url}/api/users`, '');
     },
     userByCode(_, { id }) {
       return generalRequest(`${url}/${id}`, 'GET');
