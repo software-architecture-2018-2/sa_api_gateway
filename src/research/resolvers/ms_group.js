@@ -1,4 +1,4 @@
-import { getRequest, generalRequest, generalRequestHead } from "../../utilities";
+import { getRequest, generalRequest, generalRequestHead, generalRequestDelete } from "../../utilities";
 
 const ms = 'GROUP'
 const baseurl = process.env.GENERAL_URL;

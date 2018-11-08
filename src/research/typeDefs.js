@@ -138,6 +138,7 @@ export const researchQueries = `
     me(token: String!): User_p!
     allPlans: [Plan]!
     planByCode(code: String!, token: String!): Plan!
+    groupByUsr(id: String!): [Group]!
 `;
 
 export const researchMutations = `
