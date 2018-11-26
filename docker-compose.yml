@@ -17,5 +17,3 @@ services:
       AUTH_ENTRY: 'api/auth'
       ME_ENTRY: 'api/users/me'
 
-    ports:
-      - '5000:5000'
