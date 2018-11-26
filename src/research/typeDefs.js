@@ -130,6 +130,7 @@ input loginInput {
 
 export const researchQueries = `
     allGroups: [Group]!
+    allUsers: [User]!
     groupByCode(code: String!): Group!
     allProjects: [Project]!
     projectByCode(Proyecto_Id: Int!): Project!
