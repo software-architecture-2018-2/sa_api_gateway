@@ -19,6 +19,7 @@ services:
   
   sa_proxy:
     image: spenas/sa_proxy
-    depends_on: sapiensbook_api_g
+    depends_on: 
+      - sapiensbook_api_g
     ports: 
-    - '80:80'
+      - '80:80'
