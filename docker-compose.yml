@@ -1,5 +1,12 @@
 version: '2.1'
 services:
+  sa_proxy:
+    image: spenas/sa_proxy
+    depends_on: 
+      - sapiensbook_api_g
+    ports: 
+      - '80:80'
+      
   sapiensbook_api_g:
     image: spenas/sapiensbook_api_g
     environment:
@@ -17,9 +24,4 @@ services:
       AUTH_ENTRY: 'api/auth'
       ME_ENTRY: 'api/users/me'
   
-  sa_proxy:
-    image: spenas/sa_proxy
-    depends_on: 
-      - sapiensbook_api_g
-    ports: 
-      - '80:80'
+  
