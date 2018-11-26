@@ -7,14 +7,14 @@ const url = `http://${baseurl}:${port}`;
 
 const resolvers = {
   Query: {
-    allUsers(_) {
-      return getRequest(`${url}/api/users`, '');
-    },
     userByCode(_, { id }) {
       return generalRequest(`${url}/${id}`, 'GET');
     },
     me(_, { token }) { 
       return generalRequestHead(`${url}/api/users/me`, 'GET', token);
+    },
+    allUsers(_, { token }) {
+      return generalRequestHead(`${url}/api/users/all`, 'GET', token);
     }
   },
 
@@ -29,3 +29,4 @@ const resolvers = {
 }
 
 export default resolvers;
+  
