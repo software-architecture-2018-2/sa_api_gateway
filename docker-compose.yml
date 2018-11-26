@@ -1,14 +1,7 @@
 version: '2.1'
 services:
-  sa_proxy:
-    image: spenas/sa_proxy
-    depends_on: 
-      - sapiensbook_api_g
-    ports: 
-      - '80:80'
-      
   sapiensbook_api_g:
-    image: spenas/sapiensbook_api_g
+    build: .
     environment:
       PORT: '5000'
       SHOW_URLS: 'true'
@@ -23,5 +16,6 @@ services:
       REGISTER_ENTRY: 'api/users'
       AUTH_ENTRY: 'api/auth'
       ME_ENTRY: 'api/users/me'
-  
-  
+
+    ports: 
+    - '5000:5000'
