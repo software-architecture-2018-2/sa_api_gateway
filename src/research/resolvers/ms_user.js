@@ -13,8 +13,8 @@ const resolvers = {
     me(_, { token }) { 
       return generalRequestHead(`${url}/api/users/me`, 'GET', token);
     },
-    allUsers(_, { token }) {
-      return generalRequestHead(`${url}/api/users/all`, 'GET', token);
+    allUsers(_) {
+      return generalRequest(`${url}/api/users/all`, 'GET');
     }
   },
 
