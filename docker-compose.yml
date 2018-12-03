@@ -5,7 +5,7 @@ services:
     environment:
       PORT: '5000'
       SHOW_URLS: 'true'
-      GENERAL_URL: '35.196.246.212 '
+      GENERAL_URL: ' 35.237.5.35'
       GROUP_PORT: '3000'
       USER_PORT: '3001'
       PLANNING_PORT: '3002'
