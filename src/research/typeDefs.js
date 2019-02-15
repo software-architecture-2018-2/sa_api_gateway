@@ -134,7 +134,7 @@ export const researchQueries = `
     groupByCode(code: String!): Group!
     allProjects: [Project]!
     projectByCode(Proyecto_Id: Int!): Project!
-    userByCode(code: String!, token: String!): User_p!
+    userByCode(code: String!): User_p!
     allUsers: [User_p]!
     me(token: String!): User_p!
     allPlans: [Plan]!
