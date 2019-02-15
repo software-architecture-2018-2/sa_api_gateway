@@ -99,7 +99,7 @@ input GroupInput {
 
 type Project {
     Proyecto_Id: Int!
-    Planeacion_Id: [Int]!
+    Planeacion_Id: [String]!
     Status: String!
     Miembros: [String]!
     Lider_de_proyecto:  String!
@@ -109,7 +109,7 @@ type Project {
 }
 
 input ProjectInput {
-    Planeacion_Id: [Int]!
+    Planeacion_Id: [String]!
     Status: String!
     Miembros: [String]!
     Lider_de_proyecto:  String!
