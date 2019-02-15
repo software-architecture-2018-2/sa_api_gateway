@@ -8,7 +8,8 @@ const url = `http://${baseurl}:${port}`;
 const resolvers = {
   Query: {
     userByCode(_, { id }) {
-      return generalRequest(`${url}/${id}`, 'GET');
+
+      return generalRequest(`${url}/api/users/${id}`, 'GET');
     },
     me(_, { token }) { 
       return generalRequestHead(`${url}/api/users/me`, 'GET', token);
